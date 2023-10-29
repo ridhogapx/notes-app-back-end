@@ -1,0 +1,31 @@
+{
+  "name": "notes-app-back-end",
+  "version": "1.0.0",
+  "description": "RESTful API for Bookshelf",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "lint" : "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RageNeko26/notes-app-back-end.git"
+  },
+  "keywords": [
+    "restful",
+    "api"
+  ],
+  "author": "RageNeko26",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RageNeko26/notes-app-back-end/issues"
+  },
+  "homepage": "https://github.com/RageNeko26/notes-app-back-end#readme",
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2"
+  }
+}
