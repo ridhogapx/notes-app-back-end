@@ -1,11 +1,11 @@
-const { addNoteHandler } = require("./handler")
+import { addNoteHandler } from './handler.js';
 
 const routes = [
   {
-    method: "POST",
-    path: "/notes",
+    method: 'POST',
+    path: '/notes',
     handler: addNoteHandler,
   },
 ];
 
-module.exports = routes;
+export default routes;
