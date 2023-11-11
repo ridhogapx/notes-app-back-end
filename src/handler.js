@@ -62,7 +62,7 @@ export const getNoteByIdHandler = (req, h) => {
 
 }
 
-export const updateNote = (req, h) => {
+export const updateNoteHandler = (req, h) => {
   const { id } = req.params;
 
   const { title, tags, body } = req.payload;
