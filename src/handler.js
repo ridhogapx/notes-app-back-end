@@ -61,3 +61,28 @@ export const getNoteByIdHandler = (req, h) => {
   return res;
 
 }
+
+export const updateNote = (req, h) => {
+  const { id } = req.params;
+
+  const { title, tags, body } = req.payload;
+  const updatedAt = new Date().toISOString();
+
+  const i = notes.findIndex((n) => note.id === id);
+
+  notes[i] = {
+    ...notes[i],
+    title,
+    tags,
+    body, 
+    updatedAt,
+  };
+
+  const res = h.response({
+    status: 'success',
+    message: 'Note is updated',
+  });
+
+  res.code(200);
+  return res;
+};
