@@ -1,6 +1,7 @@
 {
   "name": "notes-app-back-end",
   "version": "1.0.0",
+  "type" : "module",
   "description": "RESTful API for Bookshelf",
   "main": "server.js",
   "scripts": {
