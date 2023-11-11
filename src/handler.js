@@ -86,3 +86,28 @@ export const updateNoteHandler = (req, h) => {
   res.code(200);
   return res;
 };
+
+export const deleteNoteHandler = (req, h) => {
+  const { id } = req.params;
+  const i = notes.findIndex((n) => n.id === id);
+
+  // checking if index is exist 
+  if (i !== -1) {
+    notes.splice(i, 1);
+    const res = h.response({
+      status: 'success',
+      message: 'Note is deleted',
+    });
+
+    res.code(200);
+    return res;
+  }
+
+  const res = h.response({
+    status: 'failure',
+    message: 'Note is not found',
+  });
+
+  res.code(404);
+  return res;
+}
