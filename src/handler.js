@@ -42,12 +42,22 @@ export const getNoteByIdHandler = (req, h) => {
 
   const note = notes.filter((n) => n.id == id)[0];
 
-  console.log(note)
-
-  return h.response({
-    status: 'success',
-    data: {
-      note,
-    },
+  if (note !== undefined) {
+    return h.response({
+      status: 'success',
+        data: {
+        note,
+      },
+    });
+  }
+  
+  const res = h.response({
+    status: 'failure',
+    message: 'Note is not found',
   });
+  
+  res.code(404);
+  
+  return res;
+
 }
