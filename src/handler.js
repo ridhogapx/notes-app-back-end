@@ -37,3 +37,17 @@ export const getNotesHandler = (req, h) => {
 
 };
 
+export const getNoteByIdHandler = (req, h) => {
+  const { id } = req.params;
+
+  const note = notes.filter((n) => n.id == id)[0];
+
+  console.log(note)
+
+  return h.response({
+    status: 'success',
+    data: {
+      note,
+    },
+  });
+}
