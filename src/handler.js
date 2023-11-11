@@ -9,7 +9,7 @@ export const addNoteHandler = (req, h) => {
   const updatedAt = createdAt;
 
   const newNote = {
-    id, title, tags, body, createdAt, UpdatedAt,
+    id, title, tags, body, createdAt, updatedAt,
   };
 
   notes.push(newNote);
