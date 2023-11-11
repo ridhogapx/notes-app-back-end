@@ -68,7 +68,7 @@ export const updateNoteHandler = (req, h) => {
   const { title, tags, body } = req.payload;
   const updatedAt = new Date().toISOString();
 
-  const i = notes.findIndex((n) => note.id === id);
+  const i = notes.findIndex((n) => n.id === id);
 
   notes[i] = {
     ...notes[i],
