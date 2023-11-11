@@ -27,3 +27,13 @@ export const addNoteHandler = (req, h) => {
 
 };
 
+export const getNotesHandler = (req, h) => {
+  return h.response({
+    status: 'success',
+    data: {
+      notes,
+    },
+  });
+
+};
+
