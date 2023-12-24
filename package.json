@@ -1,7 +1,7 @@
 {
   "name": "notes-app-back-end",
   "version": "1.0.0",
-  "type" : "module",
+  "type": "module",
   "description": "RESTful API for Bookshelf",
   "main": "server.js",
   "scripts": {
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/RageNeko26/notes-app-back-end#readme",
   "devDependencies": {
     "eslint": "^8.52.0",
+    "jest": "^29.7.0",
     "nodemon": "^3.0.1"
   },
   "dependencies": {
